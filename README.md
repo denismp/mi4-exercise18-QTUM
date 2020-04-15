@@ -112,3 +112,23 @@ Create a zip file (e.g. username-deploy-smart-contract-qtum.zip) holding the fol
 
 Submit your zip file as homework at the course platform.
 
+NOTES:
+
+The following information is in the doc/build-osx.md file.
+
+0. brew install cmake automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf python qt libevent qrencode gmp
+    no flags for boost
+1. brew install autoconf automake libtool
+2. git clone --recursive https://github.com/qtumproject/qtum.git
+3. cd qtum
+3.1 ./contrib/install_db4.sh .  -- I am not sure this is needed.
+4. ./autogen.sh
+5. ./configure --without-gui
+6. make
+7. make check
+
+I was not able to get the deploy to work, but the qtumd executable is now in
+$HOME/git/qtumd/src
+
+
+
